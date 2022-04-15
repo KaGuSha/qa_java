@@ -19,7 +19,6 @@ public class AlexTest {
     public void getFriendMartyGloriaMelman() throws Exception {
 
         List<String> expectedNameFriend = List.of("Марти", "Глория", "Мелман");
-        Feline feline = new Feline();
         Alex alex = new Alex(feline);
 
         List<String> actualNameFriend = alex.getFriends();
@@ -31,7 +30,6 @@ public class AlexTest {
     public void getPlaceOfLivingNewYorkZoo() throws Exception {
 
         String expected = "Нью-Йоркский зоопарк";
-        Feline feline = new Feline();
         Alex alex = new Alex(feline);
 
         String actual = alex.getPlaceOfLiving();
@@ -43,7 +41,6 @@ public class AlexTest {
     public void getKittensAlexHasNot() throws Exception {
 
         int expected = 0;
-        Feline feline = new Feline();
         Alex alex = new Alex(feline);
 
         int actual = alex.getKittens();
@@ -54,7 +51,6 @@ public class AlexTest {
     @Test
     public void doesHaveManeFromAlexHasMane() throws Exception {
 
-        Feline feline = new Feline();
         Alex alex = new Alex(feline);
 
         boolean actual = alex.doesHaveMane();

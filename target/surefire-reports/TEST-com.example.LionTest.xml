@@ -66,8 +66,8 @@
   </properties>
   <testcase classname="com.example.LionTest" name="getKittensLionHasOne" time="0"/>
   <testcase classname="com.example.LionTest" name="doesHaveManeFemaleFalse" time="0"/>
+  <testcase classname="com.example.LionTest" name="constructorLionOtherVariantExpectedException" time="0"/>
   <testcase classname="com.example.LionTest" name="constructorLionWithFemaleAndFelineObjectNotNullHasManeFalse" time="0"/>
-  <testcase classname="com.example.LionTest" name="constructorLionOtherVariantReturnExpection" time="0"/>
   <testcase classname="com.example.LionTest" name="constructorLionMaleAndFelineObjectNotNullHasManeTrue" time="0"/>
   <testcase classname="com.example.LionTest" name="getFoodLionMeatBirdFish" time="0"/>
   <testcase classname="com.example.LionTest" name="doesHaveManeMaleTrue" time="0"/>

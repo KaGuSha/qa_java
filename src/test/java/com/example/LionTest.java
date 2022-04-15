@@ -19,12 +19,11 @@ public class LionTest {
 
     @Test
     public void doesHaveManeMaleTrue() throws Exception {
-        boolean expected = true;
         Lion lion = new Lion("Самец", feline);
 
         boolean actual = lion.doesHaveMane();
 
-        Assert.assertEquals("Результат отличается от ожидаемого значения. Ожидаемое значение результата функции: ",expected, actual);
+        Assert.assertTrue("Результат отличается от ожидаемого значения. Ожидаемое значение результата функции: true", actual);
     }
 
     @Test
@@ -61,13 +60,12 @@ public class LionTest {
 
     @Test
     public void constructorLionMaleAndFelineObjectNotNullHasManeTrue() throws Exception {
-        boolean hasManeExpected = true;
 
         Lion lion = new Lion("Самец", feline);
         boolean hasManeActual = lion.hasMane;
 
         Assert.assertNotNull(lion);
-        Assert.assertEquals("Результат отличается от ожидаемого значения. Ожидаемое значение переменной hasMane: ", hasManeExpected, hasManeActual);
+        Assert.assertTrue("Результат отличается от ожидаемого значения. Ожидаемое значение переменной hasMane: true", hasManeActual);
     }
 
     @Test

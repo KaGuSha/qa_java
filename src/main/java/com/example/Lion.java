@@ -10,13 +10,13 @@ public class Lion {
     public Lion(String sex, Feline feline) throws Exception {
         if ("Самец".equals(sex)) {
             this.hasMane = true;
-            this.feline = feline;
         } else if ("Самка".equals(sex)) {
             this.hasMane = false;
-            this.feline = feline;
         } else {
             throw new Exception("Используйте допустимые значения пола животного - самец или самка");
         }
+
+        this.feline = feline;
     }
 
     //Feline feline = new Feline();

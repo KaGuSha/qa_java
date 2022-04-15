@@ -68,7 +68,7 @@ public class AlexTest {
         List<String> expected = List.of("Животные", "Птицы", "Рыба");
         Alex alex = new Alex(feline);
 
-        Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+        Mockito.when(feline.getFood("Хищник")).thenReturn(expected);
         List<String> actual = alex.getFood();
 
         Assert.assertEquals("Результат отличается от ожидаемого значения. Ожидаемое значение: ", expected, actual);

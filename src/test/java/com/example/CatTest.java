@@ -33,7 +33,7 @@ public class CatTest {
         List<String> expected = List.of("Животные", "Птицы", "Рыба");
         Cat cat = new Cat(feline);
 
-        Mockito.when(cat.predator.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+        Mockito.when(cat.predator.eatMeat()).thenReturn(expected);
         List<String> actual = cat.getFood();
 
         Assert.assertEquals("Результат отличается от ожидаемого значения. Ожидаемое значение: ", expected, actual);

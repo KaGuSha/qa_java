@@ -53,7 +53,7 @@ public class LionTest {
         List<String> expected = List.of("Животные", "Птицы", "Рыба");
         Lion lion = new Lion("Самец", feline);
 
-        Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+        Mockito.when(feline.getFood("Хищник")).thenReturn(expected);
         List<String> actual = lion.getFood();
 
         Assert.assertEquals("Результат отличается от ожидаемого значения. Ожидаемое значение: ", expected, actual);

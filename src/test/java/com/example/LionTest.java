@@ -76,18 +76,11 @@ public class LionTest {
     }
 
     @Test
-    public void constructorLionOtherVariantReturnException() {
+    public void constructorLionOtherVariantExpectedException() {
         String expectedExceptionMessage = "Используйте допустимые значения пола животного - самец или самка";
-        Exception exception = null;
 
-        try {
-            Lion lion = new Lion("Котенок", feline);
-        } catch (Exception ex) {
-            exception = ex;
-        }
+        Exception exception = Assert.assertThrows(Exception.class, () -> new Lion("Львенок", feline));
         String actualExceptionMessage = exception.getMessage();
-
-        Assert.assertNotNull(exception);
         Assert.assertEquals("Текст ошибки отличается от ожидаемого: ",expectedExceptionMessage, actualExceptionMessage);
     }
 }

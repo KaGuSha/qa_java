@@ -5,10 +5,10 @@ import org.junit.Test;
 
 import java.util.List;
 
-public class FelineTest{
+public class FelineTest {
 
     @Test
-    public void getFamilyFeline(){
+    public void getFamilyFeline() {
         String expected = "Кошачьи";
         Feline feline = new Feline();
 
@@ -18,7 +18,7 @@ public class FelineTest{
     }
 
     @Test
-    public void getKittensWithoutCountHasOne(){
+    public void getKittensWithoutCountHasOne() {
         int expected = 1;
         Feline feline = new Feline();
 
@@ -38,7 +38,7 @@ public class FelineTest{
     }
 
     @Test()
-    public void getFoodFromFelinePredatorEatMeatBirdFish() throws Exception{
+    public void getFoodFromFelinePredatorEatMeatBirdFish() throws Exception {
         Feline feline = new Feline();
         List<String> expected = List.of("Животные","Птицы","Рыба");
 
@@ -48,7 +48,7 @@ public class FelineTest{
     }
 
     @Test()
-    public void getFoodFromFelineIfHerbivorousEatGrass() throws Exception{
+    public void getFoodFromFelineIfHerbivorousEatGrass() throws Exception {
 
         Feline feline = new Feline();
         List<String> expected = List.of("Трава", "Различные растения");
@@ -59,20 +59,13 @@ public class FelineTest{
     }
 
     @Test
-    public void getFoodFromFelineOtherVariantReturnException(){
+    public void getFoodFromFelineOtherVariantExpectedException() {
 
         String expectedExceptionMessage = "Неизвестный вид животного, используйте значение Травоядное или Хищник";
         Feline feline = new Feline();
 
-        Exception exception = null;
-                try {
-                    feline.getFood("Другое");
-                } catch (Exception ex){
-                    exception = ex;
-                }
+        Exception exception = Assert.assertThrows(Exception.class,() -> feline.getFood("Другое"));
         String actualExceptionMessage = exception.getMessage();
-
-        Assert.assertNotNull(exception);
-        Assert.assertEquals("Текст ошибки отличается от ожидаемого: ",expectedExceptionMessage, actualExceptionMessage);
+        Assert.assertEquals("Текст ошибки отличается от ожидаемого: ",expectedExceptionMessage,actualExceptionMessage);
     }
 }

@@ -54,13 +54,12 @@ public class AlexTest {
     @Test
     public void doesHaveManeFromAlexHasMane() throws Exception {
 
-        boolean expected = true;
         Feline feline = new Feline();
         Alex alex = new Alex(feline);
 
         boolean actual = alex.doesHaveMane();
 
-        Assert.assertEquals("Результат отличается от ожидаемого значения. Ожидаемое: ", expected, actual);
+        Assert.assertTrue("Результат отличается от ожидаемого значения. Ожидаемое: true", actual);
     }
 
     @Test
